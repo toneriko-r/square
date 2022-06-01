@@ -1,0 +1,193 @@
+/* common */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+  font-size: 24px;
+}
+h1,
+h2 {
+  margin: 0;
+  font-weight: normal;
+  
+}
+a {
+  text-decoration: none;
+}
+
+
+.btn {
+  display: block;
+  width: 160px;
+  background: gray;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.container {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* header */
+
+header {
+  padding: 16px 0;
+}
+header .container {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+
+/* hero */
+
+.hero {
+  background-image:url(../img/hero.jpg);
+  background-size: cover;
+  padding-top: 64px;
+  text-align: center;
+}
+
+.hero .pic img{
+  border-radius: 8%;
+  margin-top: 64px;
+}
+
+.hero .container {
+  background: rgba(255, 255, 255, .5);
+}
+
+.hero h1 {
+  padding-top: 64px;
+}
+
+.hero .btn {
+  margin: 0 auto;
+}
+/* feautures */
+
+.feautures {
+  padding: 64px 0;
+}
+
+.feautures h1 { 
+  text-align: center;
+  padding-bottom: 64px;
+
+}
+
+.feautures h2 {
+  margin-top: 8px;
+}
+
+.feautures section {
+  margin-top: 60px;
+}
+
+
+/* voices */
+
+.voices {
+  background: rgb(224, 235, 243);
+  padding: 64px 0;
+}
+
+.voices h1 {
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+
+.voices section {
+  background: whitesmoke;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+
+.voices footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.voices footer img {
+  border-radius: 50%;
+}
+.voices section + section {
+  margin-top: 16px;
+}
+
+/* call-to-action */
+
+.call-to-action {
+  padding: 64px 0;
+}
+
+.call-to-action h1 {
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+.call-to-action .btn {
+  margin: 0 auto;
+}
+
+/* copyright */
+
+.copyright {
+  background: rgb(138, 194, 138);
+  text-align: center;
+  padding: 64px 0;
+  color: #fff;
+}
+/* large screen */
+
+@media (min-width: 600px){
+  .hero .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .feautures section {
+    display: flex;
+    gap: 16px;
+  }
+
+  .feautures section:nth-child(odd){
+    flex-direction: row-reverse;
+  }
+
+  .voices .container {
+    display: flex;
+    gap: 16px;
+  }
+
+  .voices section + section {
+    margin: 0;
+  }
+
+  .voices section {
+    width: calc((100% - 32px) / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+  
