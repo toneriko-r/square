@@ -45,11 +45,52 @@ img {
   vertical-align: bottom;
 }
 
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .3s, transform .3s;
+}
+
+.animate.appear {
+  opacity: 1;
+  transform: none;
+}
+
+#to_top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+#to_top.scrolled {
+  opacity: 1;
+}
+
+
+#to_top i {
+  font-size: 32px;
+  color: #22577a;
+}
+
+
 /* header */
 
 header {
   padding: 16px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: background-color .3s, box-shadow .3s;
+  z-index: 1;
 }
+
+header.scrolled {
+  background-color: rgba(255, 255, 255, .95) ;
+  box-shadow: 0 0 4px rgba(0,0,0, .3);
+}
+
 header .container {
   align-items: center;
   justify-content: space-between;
@@ -62,7 +103,7 @@ header .container {
 .hero {
   background-image:url(../img/hero.jpg);
   background-size: cover;
-  padding-top: 64px;
+  padding-top: 128px;
   text-align: center;
 }
 
@@ -192,6 +233,14 @@ header .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .animate.delay {
+    transition-delay: .3s;
+  }
+
+  .animate.delay-more {
+    transition-delay: .6s;
   }
 }
   
